@@ -1,0 +1,272 @@
+[
+    {
+        "Name": "Social Class, Parental Encouragement, and Educational Aspirations",
+        "Link": "https://www.ssc.wisc.edu/wlsresearch/publications/files/public/Sewell-Shah_Social.Class.P.E.E.A.pdf",
+        "Nodes": {
+            "X1": "SES",
+            "X2": "Intelligence",
+            "X3": "Parental Encouragment",
+            "X4": "College Plans"
+        },
+        "DAG": [
+            [
+                "X1",
+                "X3"
+            ],
+            [
+                "X1",
+                "X4"
+            ],
+            [
+                "X2",
+                "X3"
+            ],
+            [
+                "X2",
+                "X4"
+            ],
+            [
+                "X3",
+                "X4"
+            ]
+        ],
+        "Text": "It is assumed in the path diagrams shown in Figure 1 that parental encouragement is determined by socioeconomic status and intelligence and that all three in turn determine college plans. The relationship between socioeconomic status and intelligence is not analyzed, and, consequently, no assumption is made regarding the causal link between them. The R3 and R4 indicate theresidual factors determining parental encouragement and college plans, respectively. Although the path analysis generally corroborates the findings of the correlational analysis, several observations should be made from the path coefficients indicated in this figure. "
+    },
+    {
+        "Name": "Linkages among the Foreign Exchange, Stock, and Bond Markets in Japan and the United States",
+        "Link": "https://arxiv.org/pdf/2310.16841",
+        "Nodes": {
+            "Close_JGB(t-1)": "10-year JGB closing yields at lag 1",
+            "Close_US10Y(t-1)": "the US 10-year Treasury note at lag 1",
+            "Close_Nikkei(t-1)": " The closing price of the Nikkei 225 index at lag 1",
+            "Close_SP(t-1)": "the closing prices of Standard & Poor?s (S&P) 500 at lag 1",
+            "USD(t)": "the US Dollar (USD)/JPY rate",
+            "Close_Nikkei(t)": " The closing price of the Nikkei 225 index",
+            "Close_JGB(t)": "10-year JGB closing yields",
+            "Close_JGBF(t)": "JGB futures closing prices",
+            "Close_US10Y(t)": "the US 10-year Treasury note at lag 1",
+            "Close_SP(t)": "the closing prices of Standard & Poor?s (S&P) 500",
+            "USD(t-1)": "the US Dollar (USD)/JPY rate (USD) at lag 1",
+            "Close_JGBF(t-1)": "JGB futures closing prices at lag 1"
+        },
+        "DAG": [
+            [
+                "Close_Nikkei(t-1)",
+                "Close_Nikkei(t)"
+            ],
+            [
+                "Close_SP(t-1)",
+                "Close_Nikkei(t)"
+            ],
+            [
+                "USD(t)",
+                "Close_Nikkei(t)"
+            ],
+            [
+                "Close_JGB(t-1)",
+                "USD(t)"
+            ],
+            [
+                "Close_US10Y(t-1)",
+                "USD(t)"
+            ],
+            [
+                "Close_US10Y(t-1)",
+                "Close_JGB(t)"
+            ],
+            [
+                "Close_US10Y(t-1)",
+                "Close_JGBF(t)"
+            ],
+            [
+                "Close_JGB(t)",
+                "Close_JGBF(t)"
+            ],
+            [
+                "Close_JGB(t)",
+                "Close_US10Y(t)"
+            ],
+            [
+                "Close_SP(t)",
+                ""
+            ],
+            [
+                "Close_JGBF(t-1)",
+                ""
+            ],
+            [
+                "USD(t-1)",
+                ""
+            ]
+        ],
+        "Text": "The S&P 500 index at lag 0 (Close SP(t)), the JGB futures price at lag 1 (Close JGBF(t1)), and the USD/JPY rate at lag 1 (USD(t-1)) are not associated with any other variables.\nThe previous business day?s bond market in Japan is an information source for the next\nday?s USD/JPY rate, because there is a causal flow from Close JGB(t-1) to USD(t). The\nprevious business day?s US bond market (Close US10Y(t-1)) is also an information source\nfor the next day?s USD/JPY rate (USD(t)), while affecting the next day?s bond markets\nin both Japan and the US, as illustrated by the arrows from Close US10Y(t-1) directly to\nClose JGB(t) and Close JGBF(t) and indirectly to Close US10Y(t). The Japanese stock\nmarket (Close Nikkei(t)) functions as an information sink receiving the direct impact from\nFX market (USD(t)), the direct impact from the previous day?s stock markets of both\ncountries (Close Nikkei(t-1) and Close SP(t-1)), and the indirect impact from the previous\nday?s bond markets of both countries (Close JGB(t-1) and Close US10Y(t-1))."
+    },
+    {
+        "Name": "Nonparametric causal discovery with applications to cancer bioinformatics",
+        "Link": "https://arxiv.org/pdf/2306.16520",
+        "Nodes": {
+            "i": "the node i",
+            "j": "the node j",
+            "k": "the node k",
+            "l": "the node l"
+        },
+        "DAG": [
+            [
+                "i",
+                "k"
+            ],
+            [
+                "i",
+                "j"
+            ],
+            [
+                "j",
+                "k"
+            ],
+            [
+                "j",
+                "l"
+            ],
+            [
+                "l",
+                "k"
+            ]
+        ],
+        "Text": "Take as an example the case in which the transitive hypotenuse of a triangle is\nthe second leg of another transitive triangle (Fig.2.6). In this case, the hypotenuse\nof the triangle (j,l, k) is the second leg of the triangle (i, j, k). By construction, the\narcs i -> k and j -> k represent the indirect causal relations i -> j -> k and j -> l -> k\nrespectively. "
+    },
+    {
+        "Name": "Endogenous Interference in Randomized Experiments",
+        "Link": "https://arxiv.org/pdf/2412.02183",
+        "Nodes": {
+            "w_-i": "other unobserved covariates",
+            "T_i": "the treatment assignment of the participant i",
+            "T_-i": "the treatment assignment of the other participants",
+            "Y_i": "the observed unit of interest",
+            "w_i": " the unobserved covariates",
+            "M_i": "the network mediator"
+        },
+        "DAG": [
+            [
+                "w_-i",
+                "M_i"
+            ],
+            [
+                "w_i",
+                "M_i"
+            ],
+            [
+                "T_i",
+                "M_i"
+            ],
+            [
+                "T_-i",
+                "M_i"
+            ],
+            [
+                "M_i",
+                "Y_i"
+            ],
+            [
+                "T_i",
+                "Y_i"
+            ],
+            [
+                "w_i",
+                "Y_i"
+            ]
+        ],
+        "Text": "I consider an RCT with n participants. For each participant i in {1, . . . , n}, let Yi in R\ndenote the observed outcome of interest, Ti in {0, 1} denote the treatment assignment where\nTi \\approx Bernoulli(pi) for some 0 < pi < 1, and wi denote the unobserved covariates. I consider\na single large network, allowing for an arbitrary form of interference within it. The network\nstructure is represented by an adjacency matrix A = {Aij}\nn\ni,j=1, where the (i, j)th entry\nAij in {0, 1} indicates whether units i and j are connected. The adjacency matrix is assumed\nto be undirected (symmetric), unweighted (binary values), and has no self-links (Aii = 0). I\ndifferentiate between two network structures: Apre, which represents the network observed\nbefore the intervention, and Apost, which corresponds to the network observed after the\nintervention. I assume the researchers observe both Apre and Apost\n.\nFigure 1 illustrates the causal mechanism considered in this paper.3\nI assume that the\npost-intervention network Apost, influenced by the treatment vector, plays a critical role in\ndetermining the outcome. Consequently, the exposure mapping, also known as the effective\ntreatment, which maps {Ti}\nn\ni=1 and Apost to some low-dimensional statistics, serves as a\nmediator through which the treatment indirectly affects the outcome. I denote this mediator\nas Mi\n. Specifically, I assume that Ti has both a direct effect on Yi and an indirect effect\nthrough changing network mediator Mi\n. The network Apost is shaped by both the treatments\nand the latent variable wi\n, which may also influence the outcome. As a result, wi acts as a\nconfounder between the mediator and the outcome. The treatments of other units T?i affect\nYi exclusively through the network mediator Mi\n."
+    },
+    {
+        "Name": "Efficient Estimation of Average Treatment Effects with Unmeasured Confounding and Proxies",
+        "Link": "https://arxiv.org/pdf/2501.02214",
+        "Nodes": {
+            "X": " observable covariates that affect both A and Y",
+            "W": "outcomeinducing confounding proxies affecting A only through (X, U)",
+            "U": " the unmeasured confounders",
+            "Y": "the observable outcome",
+            "Z": "treatmentinducing confounding proxies affecting Y only through (X, U)",
+            "A": "the treatment variable"
+        },
+        "DAG": [
+            [
+                "U",
+                "X"
+            ],
+            [
+                "U",
+                "Z"
+            ],
+            [
+                "U",
+                "A"
+            ],
+            [
+                "U",
+                "W"
+            ],
+            [
+                "U",
+                "Y"
+            ],
+            [
+                "X",
+                "Z"
+            ],
+            [
+                "X",
+                "Y"
+            ],
+            [
+                "X",
+                "A"
+            ],
+            [
+                "X",
+                "W"
+            ],
+            [
+                "Z",
+                "A"
+            ],
+            [
+                "A",
+                "Y"
+            ],
+            [
+                "W",
+                "Y"
+            ]
+        ],
+        "Text": "\nLet A ? {0, 1} denote the treatment variable and Y denote the observed outcome.\nLet Y (a) denote the potential outcome if treatment A = a is assigned. The observed\noutcome is Y = Y (A). Our objective is to estimate the average treatment effect tau0 = E{Y (1)?Y (0)} in settings with unmeasured confounders. Let U denote the unmeasured\nconfounders that may affect both the treatment A and outcome Y . Suppose there are\nthree types of observable covariates (X, W, Z): X affect both A and Y ; W are outcomeinducing confounding proxies affecting A only through (X, U); and Z are treatmentinducing confounding proxies affecting Y only through (X, U). See Figure 2 for a causal\ndirected acyclic graph (DAG). We formalize the relationships among these variables in\nthe following assumption Assumption 1. We assume that:\n(i) (Latent exchangeability) Y (a)\\perpendicular A | (U, X) for a = 0, 1;\n(ii) (Overlap) 0 < c1 < pr(A = a | U, X) < c2 < 1 for some constants c1 and c2;\n(iii) (Proxy variables) Z\\perpendicularY | A, U, X, and W\\perpendicular(A, Z) | U, X;\n(iv) (Completeness) For any square-integrable function g and any a, x, E{g(U) | Z, A =\na, X = x} = 0 almost surely if and only if g(U) = 0 almost surely   Assumption 1(i)-(ii) are standard in the literature of causal inference. Assumption 1(iii) describes the nature of the two types of proxies: treatment proxies Z cannot\naffect the outcome Y , and the outcome proxies W cannot be affected by either the\ntreatment A or the treatment proxies Z. This assumption is not testable as it involves\nconditional independence statements given the unmeasured variable U, but it could be\nmet in applications through careful study design. For instance, by incorporating postoutcome variables in Z and pre-treatment measurements of the outcome in W, we can\nreasonably expect Assumption 1(iii) to hold as the future cannot affect the past. Miao\net al. (2024) provided an example of evaluating the short-term effect of air pollution\non elderly hospitalization using time series data, in which air pollution measurements\ntaken after hospitalization are included in Z, and hospitalization measurements taken\nbefore air pollution are included in W. Assumption 1(iv) can be intuitively interpreted\nas a requirement for Z to exhibit sufficient variability relative to that of the unmeasured confounder U. In the case of categorical Z and U, it requires Z with at least as many categories as U. The completeness assumption is widely used in the literature for\nidentification.\n"
+    },
+    {
+        "Name": "Enhancing Economic Literacy through Causal Diagrams",
+        "Link": "https://arxiv.org/pdf/2501.12639",
+        "Nodes": {
+            "Price": "Price of the item",
+            "Revenue per item sold": "Revenue generated by each item sold",
+            "Sales": "Sales of the item",
+            "Revenue": "Total revenue"
+        },
+        "DAG": [
+            [
+                "Price",
+                "Revenue per item sold"
+            ],
+            [
+                "Price",
+                "Sales"
+            ],
+            [
+                "Sales",
+                "Revenue"
+            ],
+            [
+                "Revenue per item sold",
+                "Revenue"
+            ]
+        ],
+        "Text": "\nA causal diagram is an effective yet simple tool for representing causal information (Pearl and\nMackenzie 2018: 39). Common in systems thinking, system dynamics (Maani and Cavana, 2007;\nSterman, 2000) and artificial intelligence (Pearl and Mackenzie 2018), these diagrams visually\nrepresent the cause-and-effect relationships between variables. Variables form nodes, and arrows\nindicate causal relationships. Positive arrows show that cause and effect move in the same direction,\nwhile negative arrows indicate that the cause and effect are inversely related. An example in Figure\n1 demonstrates how to use this notation to visualize the two effects of price on revenue:\n- Revenue generated by each item sold increases with price, which is shown as a positive\narrow. The greater marginal revenue contributes to overall revenue, hence a positive arrow\nbetween these two variables. This causal chain of two positive arrows captures the\n3\ncombined positive effect of higher prices on revenue due to the increased revenue per item\nsold.\n- Additionally, a higher price depresses sales, hence a negative arrow between these two\nvariables. Because sales and revenue move in the same direction, the arrow between sales\nand revenue is positive. A negative arrow followed by a positive arrow form a negative\ncausal chain that captures the negative effect of higher prices on revenue due to a decline in\nsales. "
+    }
+]
